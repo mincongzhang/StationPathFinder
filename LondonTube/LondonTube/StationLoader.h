@@ -3,6 +3,8 @@
 
 #include <string>
 #include <vector>
+#include <boost/unordered_map.hpp>
+#include <utility> //pair
 
 #include "Station.h"
 #include "Log.h"
@@ -10,7 +12,7 @@
 
 namespace StationLoader{
 
-	inline void load(const std::string & filename, std::vector<Station> & stations){
+	inline void load(const std::string & filename, boost::unordered_map<int,Station> & stations){
 
 		std::ifstream infile;
 		infile.open(filename.c_str());  
@@ -29,7 +31,7 @@ namespace StationLoader{
 
 			if(tokens.size() != 4){
 				Log::logInfo("Wrong format: "+ str_line);
-				break;
+				return;
 			}
 
 			//0: id  1: name 2: neighbor ids 3: line ids
@@ -53,9 +55,15 @@ namespace StationLoader{
 			}
 
 			Station s(id,name,neighbour_ids,line_ids);
-			s.printAll();
+			//s.printAll();
 
-			stations.push_back(s);
+			stations.insert(std::pair<int,Station>(id,s));
+		}
+
+		typedef std::pair<int,Station> StationIndex;
+		BOOST_FOREACH(const StationIndex & p, stations){
+			Log::logInfo("===================Printing Station=====================");
+			(p.second).printAll();
 		}
 	}
 

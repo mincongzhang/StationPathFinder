@@ -8,6 +8,7 @@
 #include <boost/algorithm/string.hpp>
 #include <boost/regex.hpp>
 #include <boost/foreach.hpp>
+#include <boost/unordered_map.hpp>
 
 #include "Station.h"
 #include "StationLoader.h"
@@ -16,8 +17,9 @@
 
 int main(){
 
-	std::string filename = "stations_test.txt";
-	std::vector<Station> stations;
+	std::string filename = "stations.txt";
+	boost::unordered_map<int,Station> stations;
+	//std::vector<Station> stations;
 
 	StationLoader::load(filename,stations);
 

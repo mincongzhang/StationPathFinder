@@ -21,14 +21,14 @@ public:
 	m_id(id),m_name(name),m_neighbour_ids(neighbour_ids),m_line_ids(line_ids){}
 
 
-	void printId(){
+	void printId() const{
 		Log::logInfo( "Station Id : [" + Util::toString(m_id) + "]" );
 	}
-	void printName(){
+	void printName() const {
 		Log::logInfo( "Station name :[" + m_name +"]");
 	}
 
-	void printNeighbourIds(){
+	void printNeighbourIds() const{
 		std::string neighbours;
 		BOOST_FOREACH(const int & neighbour_id, m_neighbour_ids){
 			neighbours += Util::toString(neighbour_id) + "," ;
@@ -38,7 +38,7 @@ public:
 		Log::logInfo( "Neighbour Ids :[" + neighbours +"]");
 	}
 
-	void printLineIds(){
+	void printLineIds() const{
 		std::string lines;
 		BOOST_FOREACH(const int & line_id, m_line_ids){
 			lines += Util::toString(line_id) + "," ;
@@ -49,7 +49,7 @@ public:
 		Log::logInfo( "Line Ids :[" + lines +"]");
 	}
 
-	void printAll(){
+	void printAll() const{
 		printId();
 		printName();
 		printNeighbourIds();
