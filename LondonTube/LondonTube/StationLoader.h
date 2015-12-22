@@ -23,9 +23,9 @@ namespace StationLoader{
 		}
 
 		std::string str_line;
-		while(getline(infile, str_line)) { 
-			Log::logInfo("===================Loading Station=====================");
-			Log::logInfo(str_line);
+		while(getline(infile, str_line)) {
+			//Log::logInfo("===================Loading Station=====================");
+			//Log::logInfo(str_line);
 
 			std::vector<std::string> tokens;
 			boost::split(tokens, str_line, boost::is_any_of("|"));   
@@ -56,16 +56,17 @@ namespace StationLoader{
 			}
 
 			Station s(id,name,neighbour_ids,line_ids);
-			//s.printAll();
 
 			stations.insert(std::pair<int,Station>(id,s));
 		}
 
-		typedef std::pair<int,Station> StationIndex;
-		BOOST_FOREACH(const StationIndex & p, stations){
-			Log::logInfo("===================Printing Station=====================");
-			(p.second).printAll();
-		}
+		//typedef std::pair<int,Station> StationIndex;
+		//BOOST_FOREACH(const StationIndex & p, stations){
+		//	Log::logInfo("===================Printing Station=====================");
+		//	(p.second).printAll();
+		//}
+		Log::logInfo("Stations size ["+ Util::toString(stations.size()) +"]");
+		Log::logInfo("===================Loading Done.=====================");
 	}
 
 }

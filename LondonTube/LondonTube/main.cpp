@@ -14,6 +14,7 @@
 #include "StationLoader.h"
 #include "Log.h"
 #include "Util.h"
+#include "GraphTree.h"
 
 int main(){
 
@@ -31,6 +32,9 @@ int main(){
 	////////////////TEST///////////////
 	////////Liverpool st: 0
 	////////king's cross: 60
+	std::vector<int> path;
+	GraphTree tree(stations);
+	tree.getPath(0,60,path);
 
 	system("PAUSE");
 	return 0;

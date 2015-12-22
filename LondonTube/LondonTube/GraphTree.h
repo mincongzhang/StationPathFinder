@@ -24,7 +24,7 @@ private:
 public:
 	~Node(){};
 	//Node(): m_parent(NULL),m_value(-1) {};
-	Node(int value, NodePtr parent): m_value(value), m_parent(m_parent) {};
+	Node(int value, NodePtr parent): m_value(value), m_parent(parent) {};
 
 	void appendChild(int id){
 		NodePtr node_ptr = new Node(id,this/*parent node*/);
@@ -71,41 +71,40 @@ public:
 			int id = p_node->getId();
 			boost::unordered_map<int,Station>::iterator it = m_stations.find(id);
 			if(it == m_stations.end()) continue;
+			//Log::logInfo("Searching:" + Util::toString(id));
+
 
 			const boost::unordered_set<int> & neighbour_ids = it->second.getNeighbourIds();
-			BOOST_FOREACH(const int & neighbour_id, m_neighbour_ids){
-				p_node->appendChild(neighbour_id);
+			BOOST_FOREACH(const int & neighbour_id, neighbour_ids){
+				if(m_stations.find(neighbour_id) != m_stations.end())
+					p_node->appendChild(neighbour_id);
 			}
 
 			//get children
 			const NodeMap & children = p_node->getChildren();
 
 			//iterate children and push to queue
+			BOOST_FOREACH(NodePair pair, children){
+				if(pair.first == m_end_id){
+					Log::logInfo("Got target!" + Util::toString(m_end_id));
+					NodePtr tmp_node = pair.second;
+					while(tmp_node != NULL){
+						int tmp_id = tmp_node->getId();
+						Log::logInfo("path: " + Util::toString(tmp_id));
+						tmp_node = tmp_node->getParent();
+					}
+				}
+				node_queue.push(pair.second);
+			}
 
 			//get rid of itself
 			m_stations.erase(it);
 		};
-
-		/*
-		if(p_node == NULL) return;
-		//if(id == end_id) get back to root
-
-		boost::unordered_map<int,Station>::iterator it = m_stations.find(id);
-		if(it == m_stations.end()) return;
-
-		const boost::unordered_set<int> & neighbour_ids = it->second.getNeighbourIds();
-		BOOST_FOREACH(const int & neighbour_id, m_neighbour_ids){
-		p_node->appendChild(neighbour_id);
-		}
-
-		//get rid of itself
-		m_stations.erase(it);
-
-		//TODO: level order handle children
-		*/
 	};
 
-	void getPath(const int start_id, const int end_id, std::vector<int> & path): m_start_id(start_id), m_end_id(end_id){
+	void getPath(const int start_id, const int end_id, std::vector<int> & path){
+		m_start_id = start_id;
+		m_end_id = end_id;
 		buildTree();
 	};
 };

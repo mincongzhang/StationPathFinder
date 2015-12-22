@@ -74,7 +74,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Dictionary.h" />
-    <ClInclude Include="GraphSearch.h" />
     <ClInclude Include="GraphTree.h" />
     <ClInclude Include="Log.h" />
     <ClInclude Include="Station.h" />
