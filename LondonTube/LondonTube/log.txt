@@ -1,0 +1,90 @@
+Stations size [388]
+===================Loading Done.=====================
+TESTING: Got target! :60
+TESTING: path: 60
+TESTING: path: 36
+TESTING: path: 13
+TESTING: path: 2
+TESTING: path: 0
+TESTING: Got target! :60
+TESTING: path: 60
+TESTING: path: 37
+TESTING: path: 14
+TESTING: path: 2
+TESTING: path: 0
+Stations size [388]
+===================Loading Done.=====================
+TESTING: Got target! :60
+TESTING: path: 60
+TESTING: path: 36
+TESTING: path: 13
+TESTING: path: 2
+TESTING: path: 0
+TESTING: Got target! :60
+TESTING: path: 60
+TESTING: path: 37
+TESTING: path: 14
+TESTING: path: 2
+TESTING: path: 0
+Shortest path: 
+Station name :[LiverpoolStreetStation]
+Station name :[Moorgate]
+Station name :[OldStreet]
+Station name :[Angel]
+Station name :[King'sCrossSt.Pancras]
+Shortest path: 
+Station name :[LiverpoolStreetStation]
+Station name :[Moorgate]
+Station name :[Barbican]
+Station name :[Farringdon]
+Station name :[King'sCrossSt.Pancras]
+Stations size [388]
+===================Loading Done.=====================
+TESTING: Got target! :60
+TESTING: path: 60
+TESTING: path: 36
+TESTING: path: 13
+TESTING: path: 2
+TESTING: path: 0
+TESTING: Got target! :60
+TESTING: path: 60
+TESTING: path: 37
+TESTING: path: 14
+TESTING: path: 2
+TESTING: path: 0
+Shortest path: 
+Station name :[LiverpoolStreetStation]
+Line Ids :[15,14,7,5,3,2]
+Station name :[Moorgate]
+Line Ids :[8,7,5,3]
+Station name :[OldStreet]
+Line Ids :[8]
+Station name :[Angel]
+Line Ids :[8]
+Station name :[King'sCrossSt.Pancras]
+Line Ids :[10,8,7,5,3]
+Shortest path: 
+Station name :[LiverpoolStreetStation]
+Line Ids :[15,14,7,5,3,2]
+Station name :[Moorgate]
+Line Ids :[8,7,5,3]
+Station name :[Barbican]
+Line Ids :[7,5,3]
+Station name :[Farringdon]
+Line Ids :[7,5,3]
+Station name :[King'sCrossSt.Pancras]
+Line Ids :[10,8,7,5,3]
+Stations size [388]
+===================Loading Done.=====================
+Shortest path: 
+Station name :[LiverpoolStreetStation]
+Station name :[Moorgate]
+Station name :[OldStreet]
+Station name :[Angel]
+Station name :[King'sCrossSt.Pancras]
+Shortest path: 
+Station name :[LiverpoolStreetStation]
+Station name :[Moorgate]
+Station name :[Barbican]
+Station name :[Farringdon]
+Station name :[King'sCrossSt.Pancras]

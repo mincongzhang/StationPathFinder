@@ -23,18 +23,22 @@ int main(){
 
 	StationLoader::load(filename,stations);
 
-	//from root *level order*
-	//get neighbor into a small hash table 
-	//search for target node id
-	//delete node
-	//search for neighbor
-	//recursive
-	////////////////TEST///////////////
 	////////Liverpool st: 0
 	////////king's cross: 60
-	std::vector<int> path;
+	std::vector< std::vector<int> > paths;
 	GraphTree tree(stations);
-	tree.getPath(0,60,path);
+	paths = tree.getPath(0,60);
+
+	BOOST_FOREACH(std::vector<int> & path, paths){
+		Log::logInfo("Shortest path: ");
+		BOOST_FOREACH(int & id, path){
+			boost::unordered_map<int,Station>::const_iterator it = stations.find(id);
+			if(it == stations.end()){Log::logInfo("ERROR! Unknown id in the path"); continue;}
+
+			it->second.printName();
+			//it->second.printLineIds();
+		}
+	}
 
 	system("PAUSE");
 	return 0;
