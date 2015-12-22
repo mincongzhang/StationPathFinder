@@ -19,9 +19,18 @@ int main(){
 
 	std::string filename = "stations.txt";
 	boost::unordered_map<int,Station> stations;
-	//std::vector<Station> stations;
 
 	StationLoader::load(filename,stations);
+
+	//from root *level order*
+	//get neighbor into a small hash table 
+	//search for target node id
+	//delete node
+	//search for neighbor
+	//recursive
+	////////////////TEST///////////////
+	////////Liverpool st: 0
+	////////king's cross: 60
 
 	system("PAUSE");
 	return 0;

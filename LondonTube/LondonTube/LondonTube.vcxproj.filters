@@ -32,5 +32,14 @@
     <ClInclude Include="StationLoader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Dictionary.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphSearch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

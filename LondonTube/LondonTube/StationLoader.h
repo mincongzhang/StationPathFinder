@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <boost/unordered_map.hpp>
+#include <boost/unordered_set.hpp>
 #include <utility> //pair
 
 #include "Station.h"
@@ -38,8 +39,8 @@ namespace StationLoader{
 			int id(Util::strToInt(tokens[0]));
 			std::string name(tokens[1]);
 
-			std::vector<int> neighbour_ids;
-			std::vector<int> line_ids;
+			boost::unordered_set<int> neighbour_ids;
+			boost::unordered_set<int> line_ids;
 			std::vector<std::string> str_neighbour_ids;
 			std::vector<std::string> str_line_ids;
 
@@ -47,11 +48,11 @@ namespace StationLoader{
 			boost::split(str_line_ids, tokens[3], boost::is_any_of(",")); 
 
 			BOOST_FOREACH(const std::string & neighbour_id, str_neighbour_ids){
-				neighbour_ids.push_back(Util::strToInt(neighbour_id));
+				neighbour_ids.insert(Util::strToInt(neighbour_id));
 			}
 
 			BOOST_FOREACH(const std::string & line_id, str_line_ids){
-				line_ids.push_back(Util::strToInt(line_id));
+				line_ids.insert(Util::strToInt(line_id));
 			}
 
 			Station s(id,name,neighbour_ids,line_ids);

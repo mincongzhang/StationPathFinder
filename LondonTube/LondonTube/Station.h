@@ -3,6 +3,7 @@
 
 #include <string>
 #include <vector>
+#include <boost/unordered_set.hpp>
 #include <boost/foreach.hpp>
 
 #include "Log.h"
@@ -12,14 +13,15 @@ class Station{
 private:
 	int m_id;
 	std::string m_name;
-	std::vector<int> m_neighbour_ids;
-	std::vector<int> m_line_ids;
+	boost::unordered_set<int> m_neighbour_ids;
+	boost::unordered_set<int> m_line_ids;
 
 public:
 	Station(const int id, const std::string & name,
-			const std::vector<int> & neighbour_ids, const std::vector<int> & line_ids):
+			const boost::unordered_set<int> & neighbour_ids, const boost::unordered_set<int> & line_ids):
 	m_id(id),m_name(name),m_neighbour_ids(neighbour_ids),m_line_ids(line_ids){}
 
+	const boost::unordered_set<int> & getNeighbourIds(){return m_neighbour_ids;};
 
 	void printId() const{
 		Log::logInfo( "Station Id : [" + Util::toString(m_id) + "]" );
