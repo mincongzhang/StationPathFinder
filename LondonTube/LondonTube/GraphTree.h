@@ -113,6 +113,18 @@ public:
 	const std::vector< std::vector<int> > & getPath(const int start_id, const int end_id){
 		m_start_id = start_id;
 		m_end_id = end_id;
+
+		Log::logInfo("Searching for shortest path with start and end stations:");
+		boost::unordered_map<int,Station>::const_iterator it;
+		it = m_stations.find(m_start_id);
+		if(it == m_stations.end()){Log::logInfo("ERROR! Unknown id in the path"); }
+		it->second.printName();
+
+		it = m_stations.find(m_end_id);
+		if(it == m_stations.end()){Log::logInfo("ERROR! Unknown id in the path"); }
+		it->second.printName();
+
+
 		buildTree();
 		return m_shortest_paths;		
 	};
