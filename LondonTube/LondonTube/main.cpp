@@ -15,6 +15,7 @@
 #include "Log.h"
 #include "Util.h"
 #include "GraphTree.h"
+#include "Dijkstra.h"
 
 int main(){
 
@@ -23,11 +24,21 @@ int main(){
 
 	StationLoader::load(filename,stations);
 
-	////////Liverpool st: 0
-	////////king's cross: 60
+	/**********************Approach 1*******************************/
+	/*
+	    Breadth First Search: 
+	    Build a tree with root = start station
+	    Level order traverse to get shortest path	
+	    It will return all possible shortest path, without considering line transferring
+	
+	    e.g. Liverpool st: 0, king's cross: 60
+		paths = tree.getPath(0,60);
+	*/
+
+	Log::logInfo("====================== Breadth First Search ======================");
 	std::vector< std::vector<int> > paths;
 	GraphTree tree(stations);
-	paths = tree.getPath(0,60);
+	paths = tree.getPath(0,17);
 
 	BOOST_FOREACH(std::vector<int> & path, paths){
 		Log::logInfo("Shortest path: ");
@@ -39,6 +50,19 @@ int main(){
 			//it->second.printLineIds();
 		}
 	}
+	/***************************************************************/
+
+	/**********************Approach 2*******************************/
+	/*
+		Dijkstra's Algorithm
+	*/
+	DNode a(1),b(2);
+	a.setPriority(1);
+	b.setPriority(2);
+	if(a<b){
+		Log::logInfo("Greater!");
+	};
+	/***************************************************************/
 
 	system("PAUSE");
 	return 0;

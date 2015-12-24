@@ -11,39 +11,40 @@
 #include "Station.h"
 #include "Log.h"
 
-class Node;
-typedef Node* NodePtr;
-typedef boost::unordered_map<int,NodePtr> NodeMap;
-typedef NodeMap::value_type NodePair;
+namespace{
 
-class Node{
-private:
-	NodePtr m_parent;
-	NodeMap m_children;
-	int     m_value;
+	class Node;
+	typedef Node* NodePtr;
+	typedef boost::unordered_map<int,NodePtr> NodeMap;
+	typedef NodeMap::value_type NodePair;
 
-public:
-	~Node(){};
-	//Node(): m_parent(NULL),m_value(-1) {};
-	Node(int value, NodePtr parent): m_value(value), m_parent(parent) {};
+	class Node{
+	private:
+		NodePtr m_parent;
+		NodeMap m_children;
+		int     m_value;
 
-	void appendChild(int id){
-		NodePtr node_ptr = new Node(id,this/*parent node*/);
-		m_children.insert(NodePair(id,node_ptr));
+	public:
+		~Node(){};
+		Node(int value, NodePtr parent): m_value(value), m_parent(parent) {};
+
+		void appendChild(int id){
+			NodePtr node_ptr = new Node(id,this/*parent node*/);
+			m_children.insert(NodePair(id,node_ptr));
+		};
+
+		const NodeMap & getChildren(){
+			return m_children;
+		};
+
+		NodePtr getParent(){
+			return m_parent;
+		};
+
+		int getId(){ return m_value;};
 	};
 
-	const NodeMap & getChildren(){
-		return m_children;
-	};
-
-	NodePtr getParent(){
-		return m_parent;
-	};
-
-	int getId(){ return m_value;};
-
-
-};
+}
 
 class GraphTree{
 private:

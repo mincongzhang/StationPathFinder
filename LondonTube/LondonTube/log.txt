@@ -1,16 +1,54 @@
-===================Loading Done: [388] stations loaded. =====================
+Loading... [388] stations loaded. 
+====================== Breadth First Search ======================
 Searching for shortest path with start and end stations:
 Station name :[LiverpoolStreetStation]
-Station name :[King'sCrossSt.Pancras]
+Station name :[MileEnd]
 Shortest path: 
 Station name :[LiverpoolStreetStation]
-Station name :[Moorgate]
-Station name :[OldStreet]
-Station name :[Angel]
-Station name :[King'sCrossSt.Pancras]
+Station name :[BethnalGreen]
+Station name :[MileEnd]
 Shortest path: 
 Station name :[LiverpoolStreetStation]
-Station name :[Moorgate]
-Station name :[Barbican]
-Station name :[Farringdon]
-Station name :[King'sCrossSt.Pancras]
+Station name :[Stratford]
+Station name :[MileEnd]
+Loading... [388] stations loaded. 
+====================== Breadth First Search ======================
+Searching for shortest path with start and end stations:
+Station name :[LiverpoolStreetStation]
+Station name :[MileEnd]
+Shortest path: 
+Station name :[LiverpoolStreetStation]
+Station name :[BethnalGreen]
+Station name :[MileEnd]
+Shortest path: 
+Station name :[LiverpoolStreetStation]
+Station name :[Stratford]
+Station name :[MileEnd]
+Loading... [388] stations loaded. 
+====================== Breadth First Search ======================
+Searching for shortest path with start and end stations:
+Station name :[LiverpoolStreetStation]
+Station name :[MileEnd]
+Shortest path: 
+Station name :[LiverpoolStreetStation]
+Station name :[BethnalGreen]
+Station name :[MileEnd]
+Shortest path: 
+Station name :[LiverpoolStreetStation]
+Station name :[Stratford]
+Station name :[MileEnd]
+Greater!
+Loading... [388] stations loaded. 
+====================== Breadth First Search ======================
+Searching for shortest path with start and end stations:
+Station name :[LiverpoolStreetStation]
+Station name :[MileEnd]
+Shortest path: 
+Station name :[LiverpoolStreetStation]
+Station name :[BethnalGreen]
+Station name :[MileEnd]
+Shortest path: 
+Station name :[LiverpoolStreetStation]
+Station name :[Stratford]
+Station name :[MileEnd]
+Greater!

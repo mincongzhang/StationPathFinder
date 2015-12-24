@@ -66,7 +66,7 @@ namespace StationLoader{
 		//	(p.second).printAll();
 		//}
 
-		Log::logInfo("===================Loading Done: ["+ Util::toString(stations.size()) + "] stations loaded. =====================");
+		Log::logInfo("Loading... ["+ Util::toString(stations.size()) + "] stations loaded. ");
 	}
 
 }
