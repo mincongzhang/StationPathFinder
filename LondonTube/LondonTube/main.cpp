@@ -56,12 +56,7 @@ int main(){
 	/*
 		Dijkstra's Algorithm
 	*/
-	DNode a(1),b(2);
-	a.setPriority(1);
-	b.setPriority(2);
-	if(a<b){
-		Log::logInfo("Greater!");
-	};
+	dijkstraTest();
 	/***************************************************************/
 
 	system("PAUSE");
