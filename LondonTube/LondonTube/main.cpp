@@ -32,13 +32,13 @@ int main(){
 	    It will return all possible shortest path, without considering line transferring
 	
 	    e.g. Liverpool st: 0, king's cross: 60
-		paths = tree.getPath(0,60);
+		paths = tree_path_finder.getPath(0,60);
 	*/
 
 	Log::logInfo("====================== Breadth First Search ======================");
 	std::vector< std::vector<int> > paths;
-	GraphTree tree(stations);
-	paths = tree.getPath(0,17);
+	GraphTree tree_path_finder(stations);
+	paths = tree_path_finder.getPath(0,17);
 
 	BOOST_FOREACH(std::vector<int> & path, paths){
 		Log::logInfo("Shortest path: ");
@@ -56,7 +56,9 @@ int main(){
 	/*
 		Dijkstra's Algorithm
 	*/
-	dijkstraTest();
+	Log::logInfo("====================== Dijkstra's Algorithm ======================");
+	Dijkstra dijk_path_finder(stations);
+	dijk_path_finder.getPath(0,17);
 	/***************************************************************/
 
 	system("PAUSE");

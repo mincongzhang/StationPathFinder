@@ -21,7 +21,8 @@ public:
 			const boost::unordered_set<int> & neighbour_ids, const boost::unordered_set<int> & line_ids):
 	m_id(id),m_name(name),m_neighbour_ids(neighbour_ids),m_line_ids(line_ids){}
 
-	const boost::unordered_set<int> & getNeighbourIds(){return m_neighbour_ids;};
+	const boost::unordered_set<int> & getNeighbourIds() const {return m_neighbour_ids;};
+	const boost::unordered_set<int> & getLineIds() const {return m_line_ids;};
 
 	void printId() const{
 		Log::logInfo( "Station Id : [" + Util::toString(m_id) + "]" );
