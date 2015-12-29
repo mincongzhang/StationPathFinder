@@ -2,187 +2,23 @@ Loading... [388] stations loaded.
 ====================== Breadth First Search ======================
 Searching for shortest path with start and end stations:
 Station name :[LiverpoolStreetStation]
-Station name :[MileEnd]
+Station name :[King'sCrossSt.Pancras]
 Shortest path: 
 Station name :[LiverpoolStreetStation]
-Station name :[BethnalGreen]
-Station name :[MileEnd]
+Station name :[Moorgate]
+Station name :[OldStreet]
+Station name :[Angel]
+Station name :[King'sCrossSt.Pancras]
 Shortest path: 
 Station name :[LiverpoolStreetStation]
-Station name :[Stratford]
-Station name :[MileEnd]
+Station name :[Moorgate]
+Station name :[Barbican]
+Station name :[Farringdon]
+Station name :[King'sCrossSt.Pancras]
 ====================== Dijkstra's Algorithm ======================
-neighbor cost:1
-Next station: [7]
-neighbor cost:1
-Next station: [6]
-neighbor cost:1
-Next station: [4]
-neighbor cost:1
-Next station: [3]
-neighbor cost:1
-Next station: [2]
-neighbor cost:1
-Next station: [1]
-neighbor cost:2
-Next station: [24]
-neighbor cost:2
-Next station: [23]
-neighbor cost:2
-Next station: [22]
-neighbor cost:2
-Next station: [21]
-neighbor cost:2
-Next station: [20]
-neighbor cost:2
-Next station: [19]
-neighbor cost:2
-Next station: [18]
-neighbor cost:2
-neighbor cost:2
-Next station: [17]
-neighbor cost:2
-Next station: [15]
-neighbor cost:2
-Next station: [5]
-neighbor cost:2
-neighbor cost:2
-Next station: [12]
-neighbor cost:2
-Next station: [11]
-neighbor cost:2
-Next station: [10]
-neighbor cost:2
-Next station: [9]
-neighbor cost:2
-Next station: [8]
-neighbor cost:2
-neighbor cost:2
-neighbor cost:2
-neighbor cost:2
-Next station: [16]
-neighbor cost:2
-neighbor cost:2
-neighbor cost:2
-Next station: [14]
-neighbor cost:2
-Next station: [13]
-neighbor cost:2
-neighbor cost:2
-neighbor cost:2
-neighbor cost:2
-neighbor cost:3
-neighbor cost:3
-Next station: [41]
-Reach end id
-17
-Testing m_frontier done
-Loading... [388] stations loaded. 
-====================== Breadth First Search ======================
-Searching for shortest path with start and end stations:
-Station name :[LiverpoolStreetStation]
-Station name :[MileEnd]
 Shortest path: 
 Station name :[LiverpoolStreetStation]
-Station name :[BethnalGreen]
-Station name :[MileEnd]
-Shortest path: 
-Station name :[LiverpoolStreetStation]
-Station name :[Stratford]
-Station name :[MileEnd]
-====================== Dijkstra's Algorithm ======================
-Next station: [0]
-neighbor cost:1
-neighbor cost:1
-neighbor cost:1
-neighbor cost:1
-neighbor cost:1
-neighbor cost:1
-Next station: [7]
-neighbor cost:2
-neighbor cost:2
-neighbor cost:2
-neighbor cost:2
-neighbor cost:2
-neighbor cost:2
-neighbor cost:2
-neighbor cost:2
-neighbor cost:2
-Next station: [4]
-neighbor cost:2
-neighbor cost:2
-neighbor cost:2
-Next station: [1]
-neighbor cost:2
-neighbor cost:2
-neighbor cost:2
-neighbor cost:2
-neighbor cost:2
-neighbor cost:2
-neighbor cost:2
-neighbor cost:2
-Next station: [6]
-neighbor cost:2
-neighbor cost:2
-neighbor cost:2
-Next station: [2]
-neighbor cost:2
-neighbor cost:2
-neighbor cost:2
-neighbor cost:2
-Next station: [3]
-neighbor cost:2
-neighbor cost:2
-Next station: [23]
-neighbor cost:3
-neighbor cost:3
-Reach end id
-17
-Loading... [388] stations loaded. 
-====================== Breadth First Search ======================
-Searching for shortest path with start and end stations:
-Station name :[LiverpoolStreetStation]
-Station name :[MileEnd]
-Shortest path: 
-Station name :[LiverpoolStreetStation]
-Station name :[BethnalGreen]
-Station name :[MileEnd]
-Shortest path: 
-Station name :[LiverpoolStreetStation]
-Station name :[Stratford]
-Station name :[MileEnd]
-====================== Dijkstra's Algorithm ======================
-Next station: [0]
-Next station: [7]
-Next station: [4]
-Next station: [1]
-Next station: [6]
-Next station: [2]
-Next station: [3]
-Next station: [23]
-Reach end id
-17
-Loading... [388] stations loaded. 
-====================== Breadth First Search ======================
-Searching for shortest path with start and end stations:
-Station name :[LiverpoolStreetStation]
-Station name :[MileEnd]
-Shortest path: 
-Station name :[LiverpoolStreetStation]
-Station name :[BethnalGreen]
-Station name :[MileEnd]
-Shortest path: 
-Station name :[LiverpoolStreetStation]
-Station name :[Stratford]
-Station name :[MileEnd]
-====================== Dijkstra's Algorithm ======================
-Next station: [0]
-Next station: [7]
-Next station: [4]
-Next station: [1]
-Next station: [6]
-Next station: [2]
-Next station: [3]
-Next station: [23]
-Reach end id
-17
+Station name :[Moorgate]
+Station name :[Barbican]
+Station name :[Farringdon]
+Station name :[King'sCrossSt.Pancras]

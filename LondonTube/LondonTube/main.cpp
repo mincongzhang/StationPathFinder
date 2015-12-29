@@ -38,13 +38,13 @@ int main(){
 	Log::logInfo("====================== Breadth First Search ======================");
 	std::vector< std::vector<int> > paths;
 	GraphTree tree_path_finder(stations);
-	paths = tree_path_finder.getPath(0,17);
+	paths = tree_path_finder.getPath(0,60);
 
 	BOOST_FOREACH(std::vector<int> & path, paths){
 		Log::logInfo("Shortest path: ");
 		BOOST_FOREACH(int & id, path){
 			boost::unordered_map<int,Station>::const_iterator it = stations.find(id);
-			if(it == stations.end()){Log::logInfo("ERROR! Unknown id in the path"); continue;}
+			if(it == stations.end()){Log::logInfo("ERROR! Unknown id in the path :["+Util::toString(id)+"]");  continue;}
 
 			it->second.printName();
 			//it->second.printLineIds();
@@ -52,13 +52,24 @@ int main(){
 	}
 	/***************************************************************/
 
+
+
+
 	/**********************Approach 2*******************************/
 	/*
 		Dijkstra's Algorithm
 	*/
 	Log::logInfo("====================== Dijkstra's Algorithm ======================");
 	Dijkstra dijk_path_finder(stations);
-	dijk_path_finder.getPath(0,17);
+	std::vector<int> path = dijk_path_finder.getPath(0,60);
+
+	Log::logInfo("Shortest path: ");
+	BOOST_FOREACH(int & id, path){
+		boost::unordered_map<int,Station>::const_iterator it = stations.find(id);
+		if(it == stations.end()){Log::logInfo("ERROR! Unknown id in the path :["+Util::toString(id)+"]"); continue;}
+
+		it->second.printName();
+	}
 	/***************************************************************/
 
 	system("PAUSE");

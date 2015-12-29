@@ -4,7 +4,7 @@
 #include <queue>
 #include <vector>
 #include <utility>
-#include<algorithm>
+#include <algorithm>
 #include <boost/unordered_map.hpp>
 #include <boost/foreach.hpp>
 

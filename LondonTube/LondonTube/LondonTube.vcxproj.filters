@@ -32,10 +32,10 @@
     <ClInclude Include="StationLoader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Dictionary.h">
+    <ClInclude Include="GraphTree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GraphTree.h">
+    <ClInclude Include="Dijkstra.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
