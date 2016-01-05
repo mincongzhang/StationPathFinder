@@ -73,7 +73,7 @@ public:
 			int id = p_node->getId();
 			boost::unordered_map<int,Station>::iterator it = m_stations.find(id);
 			if(it == m_stations.end()) continue;
-			//Log::logInfo("Searching:" + Util::toString(id));
+			//logInfo("Searching:"<<id);
 
 			//get neighbors
 			const boost::unordered_set<int> & neighbour_ids = it->second.getNeighbourIds();
@@ -88,7 +88,7 @@ public:
 			//iterate children and push to queue
 			BOOST_FOREACH(NodePair pair, children){
 				if(pair.first == m_end_id){
-					//Log::logInfo("TESTING: Got target! :" + Util::toString(m_end_id));
+					//logInfo("TESTING: Got target! :"<<m_end_id);
 
 					//trace back and get path
 					std::vector<int> path;
@@ -96,7 +96,7 @@ public:
 					while(tmp_node != NULL){
 						int tmp_id = tmp_node->getId();
 						path.push_back(tmp_id);
-						//Log::logInfo("TESTING: path: " + Util::toString(tmp_id));
+						//logInfo("TESTING: path: "<<tmp_id);
 						tmp_node = tmp_node->getParent();
 					}
 
@@ -115,14 +115,14 @@ public:
 		m_start_id = start_id;
 		m_end_id = end_id;
 
-		Log::logInfo("Searching for shortest path with start and end stations:");
+		logInfo("Searching for shortest path with start and end stations:");
 		boost::unordered_map<int,Station>::const_iterator it;
 		it = m_stations.find(m_start_id);
-		if(it == m_stations.end()){Log::logInfo("ERROR! Unknown id in the path"); }
+		if(it == m_stations.end()){logInfo("ERROR! Unknown id in the path"); }
 		it->second.printName();
 
 		it = m_stations.find(m_end_id);
-		if(it == m_stations.end()){Log::logInfo("ERROR! Unknown id in the path"); }
+		if(it == m_stations.end()){logInfo("ERROR! Unknown id in the path"); }
 		it->second.printName();
 
 

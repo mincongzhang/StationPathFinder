@@ -13,8 +13,8 @@ namespace Util{
 			out = boost::lexical_cast<OUT>( in );
 		}
 		catch( boost::bad_lexical_cast& ) {
-			Log::logInfo( "lexCast error for input : " + toString(in) );
-			//Log::logInfo( "Exception thrown: [" << e.what() << "] for INPUT[" << in << "]" );
+			logInfo( "lexCast error for input : " + toString(in) );
+			//logInfo( "Exception thrown: [" << e.what() << "] for INPUT[" << in << "]" );
 			return false;
 		}
 		return true;

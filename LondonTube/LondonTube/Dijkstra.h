@@ -61,7 +61,7 @@ public:
 		//Check previous id (came from)
 		boost::unordered_map<int,int>::const_iterator came_from_it = m_came_from.find(cur_id);
 		if(came_from_it == m_came_from.end()) {
-			Log::logInfo("Error! Cannot find previous id for ["+ Util::toString(cur_id) +"]"); 
+			logInfo("Error! Cannot find previous id for ["<<cur_id<<"]"); 
 			return 0.0;
 		}
 
@@ -72,7 +72,7 @@ public:
 		pre_it  = m_const_stations.find(pre_id);
 		next_it = m_const_stations.find(next_id);
 		if(pre_it == m_const_stations.end() || next_it == m_const_stations.end()){
-			Log::logInfo("Error! Cannot find id :["+ Util::toString(pre_id) + "] or [" + Util::toString(next_id) +"]");
+			logInfo("Error! Cannot find id :["<<pre_id<<"] or ["<<next_id<<"]");
 		}
 
 
@@ -107,7 +107,7 @@ public:
 			boost::unordered_map<int,Station>::const_iterator it_cur;
 			it_cur = m_stations.find(cur_id);
 			if(it_cur == m_stations.end()){
-				Log::logInfo("[" + Util::toString(cur_id) + " ] not found in stations");
+				logInfo("["<<cur_id<<" ] not found in stations");
 				continue;
 			}
 
@@ -122,8 +122,7 @@ public:
 				Cost unary_cost    = m_cost[cur_id];
 				Cost pairwise_cost = getCostBetweenStations(cur_id,neighbour_id);
 				Cost new_cost = unary_cost + pairwise_cost;
-				//Log::logInfo("TESTING: Checking cost: " + Util::toString(cur_id) + " to " +
-				//	Util::toString(neighbour_id) + " Cost: " + Util::toString(pairwise_cost));
+				//logInfo("TESTING: Checking cost: " <<cur_id<<" to "<<neighbour_id<<" Cost: " <<pairwise_cost);
 
 				//Decide if move forward 
 				boost::unordered_map<int,Cost>::const_iterator cost_it;
@@ -150,7 +149,7 @@ public:
 			path.push_back(id);
 			path_it = m_came_from.find(id);
 			if(path_it == m_came_from.end()){
-				Log::logInfo("Error! Unknown station id in m_came_from:["+Util::toString(id)+"]");
+				logInfo("Error! Unknown station id in m_came_from:["<<id<<"]");
 				break;
 			}
 

@@ -19,19 +19,19 @@ namespace StationLoader{
 		infile.open(filename.c_str());  
 
 		if(!infile) {
-			Log::logInfo("error loading file: "+filename);
+			logInfo("error loading file: "+filename);
 		}
 
 		std::string str_line;
 		while(getline(infile, str_line)) {
-			//Log::logInfo("===================Loading Station=====================");
-			//Log::logInfo(str_line);
+			//logInfo("===================Loading Station=====================");
+			//logInfo(str_line);
 
 			std::vector<std::string> tokens;
 			boost::split(tokens, str_line, boost::is_any_of("|"));   
 
 			if(tokens.size() != 4){
-				Log::logInfo("Wrong format: "+ str_line);
+				logInfo("Wrong format: "+ str_line);
 				return;
 			}
 
@@ -62,11 +62,11 @@ namespace StationLoader{
 
 		//typedef std::pair<int,Station> StationIndex;
 		//BOOST_FOREACH(const StationIndex & p, stations){
-		//	Log::logInfo("===================Printing Station=====================");
+		//	logInfo("===================Printing Station=====================");
 		//	(p.second).printAll();
 		//}
 
-		Log::logInfo("Loading... ["+ Util::toString(stations.size()) + "] stations loaded. ");
+		logInfo("Loading... ["<<stations.size()<<"] stations loaded. ");
 	}
 
 }

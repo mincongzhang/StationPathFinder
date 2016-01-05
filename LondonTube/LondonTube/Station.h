@@ -25,10 +25,10 @@ public:
 	const boost::unordered_set<int> & getLineIds() const {return m_line_ids;};
 
 	void printId() const{
-		Log::logInfo( "Station Id : [" + Util::toString(m_id) + "]" );
+		logInfo( "Station Id : ["<<m_id<<"]" );
 	}
 	void printName() const {
-		Log::logInfo( "Station name :[" + m_name +"]");
+		logInfo( "Station name :[" + m_name +"]");
 	}
 
 	void printNeighbourIds() const{
@@ -38,7 +38,7 @@ public:
 		}
 		neighbours.pop_back();
 
-		Log::logInfo( "Neighbour Ids :[" + neighbours +"]");
+		logInfo( "Neighbour Ids :["<<neighbours<<"]");
 	}
 
 	void printLineIds() const{
@@ -49,7 +49,7 @@ public:
 
 		lines.pop_back();
 
-		Log::logInfo( "Line Ids :[" + lines +"]");
+		logInfo( "Line Ids :[" + lines +"]");
 	}
 
 	void printAll() const{
